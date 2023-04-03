@@ -1,4 +1,4 @@
-# 2023-03-16 3주차 수업
+# 2023-03-16 3주차 C언어 수업
 ``` c
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>

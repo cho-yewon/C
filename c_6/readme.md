@@ -107,3 +107,53 @@ int main()
     return 0;
 }
 ```
+```c
+#include <stdio.h>
+int main(void)
+{
+    int i=0;
+
+    do
+    {
+        printf("1---새로만들기\n");
+        printf("2---파일열기\n");
+        printf("3---파일닫기\n");
+        printf("4---종료\n");
+        printf("하나를 선택하시요\n");
+        scanf("%d", &i);
+    } while (i!=4);
+
+    printf("선택된 메뉴=%d\n", i);
+
+    return 0;
+}
+```
+```c
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+    srand((unsigned)time(NULL));
+    int answer=rand()%100;
+    int guess, tries=0;
+
+    do
+    {
+        printf("정답을 추측하시오 : ");
+        scanf("%d",&guess);
+        tries++;
+        if(guess>answer)
+        {
+            printf("LOW\n");
+        }
+        if(guess<answer)
+        {
+            printf("HIGH\n");
+        }
+    }while(guess!=answer);
+    printf("축하합니다. 시도횟수=%d",tries);
+    return 0;
+}
+```
